@@ -1,12 +1,12 @@
 
-const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-filmes.json';
-
 async function inform() {
     try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Erro na API: ${res.status}`);
+        const dados = {
+            total_filmes: 12000,
+            total_espectadores: 4500000000,
+            media_horas: 12.5
+        };
         
-        const dados = await res.json();
         const paragrafo = document.createElement('p');
         const totalFilmes = dados.total_filmes;
         const espectadores = (dados.total_espectadores / 1e6).toFixed(1);

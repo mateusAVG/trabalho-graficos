@@ -1,12 +1,13 @@
 
 async function generoFilmes() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/genero-filmes.json';
     try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Erro na API: ${res.status}`);
-        
-        const dados = await res.json();
-        console.log("Dados dos gêneros de filmes:", dados);
+        const dados = {
+            Ação: 45,
+            Drama: 30,
+            Comédia: 25,
+            Terror: 20,
+            Romance: 15
+        };
 
         const generos = Object.keys(dados);
         const popularidade = Object.values(dados);

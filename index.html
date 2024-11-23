@@ -4,28 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estatísticas de Filmes</title>
+    <title>Relatório de Filmes</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Relatório de Filmes</h1>
         <nav>
-            <a href="index.html" id="world">Visão Geral</a>
-            <a href="index.html" id="casa">Home</a> <!-- Link corrigido -->
+            <!-- Atualizando os links para âncoras -->
+            <a href="#visao-geral">Visão Geral</a>
+            <a href="#home">Home</a>
         </nav>
     </header>
-    <main class="graficos">
-        <!-- Este é o elemento onde os gráficos serão inseridos -->
-        <section id="graficos-" class="graficos-"></section>
+
+    <main>
+        <!-- Conteúdo para Visão Geral -->
+        <section id="visao-geral">
+            <div id="graficos-"></div>
+        </section>
+
+        <!-- Conteúdo para Home -->
+        <section id="home">
+            <p>Filmes são arte, inspiração e cultura.</p>
+        </section>
     </main>
-    <footer>
-        <p>Filmes são arte, inspiração e cultura.</p>
-    </footer>
-    <!-- Scripts de gráficos -->
-    <script type="module" src="graficosprincipais.js"></script>
-    <script type="module" src="pessoasconect.js"></script>
-    <script type="module" src="redesfav.js"></script>
+
+    <script src="graficosprincipais.js"></script>
+    <script src="pessoasconect.js"></script>
+    <script src="redesfav.js"></script>
 </body>
 </html>

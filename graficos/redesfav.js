@@ -1,12 +1,13 @@
 
 async function diretoresFavoritos() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/diretores.json';
     try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Erro na API: ${res.status}`);
-        
-        const dados = await res.json();
-        console.log("Dados dos diretores favoritos:", dados);
+        const dados = {
+            "Christopher Nolan": 40,
+            "Quentin Tarantino": 30,
+            "Steven Spielberg": 50,
+            "Martin Scorsese": 35,
+            "Ridley Scott": 25
+        };
 
         const diretores = Object.keys(dados);
         const popularidade = Object.values(dados);
